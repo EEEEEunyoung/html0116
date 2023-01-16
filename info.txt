@@ -1,0 +1,9 @@
+npm init --yes
+
+npm i express
+: Restful API 지원하는 프레임워크
+
+npm i nodemon --save-dev  
+:--save-dev 옵션을 붙이면 로컬에서만 사용함
+
+<script src="https://kit.fontawesome.com/174f562234.js" crossorigin="anonymous"></script>
