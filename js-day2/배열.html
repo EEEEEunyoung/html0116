@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+/* 배열 : Array
+연관된 값들을 하나의 그룹으로 묶어서 나열한 구조 
+*/
+const fruits = ['🍟','🍞','🥯']
+//원시적 - 인덱스 값이 있다.      &포이치도 프로토타입으로 정의,
+for(let i=0;i<fruits.length;i++){
+    document.write(fruits[i]);
+}
+
+
+fruits.forEach(element => {
+    // document.write(fruits);
+fruits.forEach((element, index)=>console.log(index, element));
+fruits.forEach((element, index, fruits)=>console.log(index, element, fruits));
+fruits.forEach((element, index, fruits)=>
+document.write(index, element, fruits));
+
+});
+
+
+
+
+    </script>
+<br><br><br><br><br>
+    하이 에브리 바디 내가 누군지 아니~
+</body>
+</html>

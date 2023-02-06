@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .line{
+            width: 100%;
+    }
+
+    table td label{
+        text-align: center;
+    }
+
+            </style>
+</head>
+<body>
+    <form id="portfolio" method="post" action="insert.no">
+        <fieldset>
+
+            <legend>공지사항 작성하기</legend>
+            <table class="line">
+            
+            
+        <tr>
+            <td>
+                
+                <label class='tda'>&nbsp&nbsp제목</label>   
+            </td>
+            <td>
+                
+                <textarea class="a" cols="25" rows="1"  name="title" placeholder="제목을 입력하시오." required></textarea>
+    </td>
+    <br />
+</tr>
+
+<tr>
+    
+    <td>
+        <label class='tda'>&nbsp&nbsp내용</label>
+    </td><td>
+        
+        <textarea class="a" cols="25" rows="10" id="content" placeholder="내용을 입력하시오."></textarea>
+    </td>
+    <br />
+    
+</tr>
+<tr>
+    
+    <td>
+        
+        <label class='tda'>첨부파일</label>
+    </td><td>
+        
+        <input class="a" type="file"id="uploadFile" name="uploadFile">
+    </td>
+</tr>
+<tr>
+    
+    <td></td>            
+    <td>
+        
+        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <button onclick="join()">작성하기</button>
+    </td>
+</tr>
+
+</table>
+
+</fieldset>
+
+
+
+
+
+
+</form>
+
+
+</body>
+    </html>

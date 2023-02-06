@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경이미지</title>
+    <style>
+        *{
+            border: 1px solid red;
+        }
+        div{
+            width: 500px;
+            height: 800px;
+            /* background-color: aquamarine; */
+            background-color: aquamarine;
+            /* background-size: cover; */
+            /* display: inline-block; */
+            background-repeat: repeat-y;
+            /*  */
+            /* background-size: 70px;   비율유지, 요소의 더 넓은 너비에 맞춤 */
+            /* background-size:contain;  비율유지, 요소의 더 짧은 너비에 맞춤 */
+
+            background-image: url("../images/apple_280x280.jpg");
+            /* background-position: 30px 100px;  // center 하면 가운데 배치  */
+            /* background-position:  bottom right; */
+            background-attachment:fixed;  //스크롤은 되는데 이미지는 멈춰라 
+        }
+        
+        body{
+            height: 3000px;
+        }
+
+    </style>
+
+
+</head>
+<body>
+    
+    <div>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus repudiandae facere illum unde odit repellendus eos reiciendis praesentium cupiditate fugiat!</p>
+    
+</body>
+</html>

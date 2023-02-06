@@ -1,0 +1,76 @@
+<!DOCTYPE html><!-- 선언문 html-->
+<html lang = "ko">
+<head>
+	<meta charset="UTF-8" /><!-- UTF-8 전세계 표준 포맷 -->
+    <!-- EXPLORER에 여러버전 혹시 낮은 버전 동작이 될 때 최신 익스플로러로 랜더링 해줌  -->
+    <!-- EDGE버전부터 크롬 V8 사용 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <!-- VIEW PORT 가 있어야 모바일 디바이스가 모바일 페이지를 제대로 출력 
+        하이브리드 앱  = 네이비트 앱 = 웹앱
+    요소 = 태그 = 노드
+1.) 인라인요소 - 크기 없음, 자동 줄바꿈 없음 <br />
+2.) 블락요소 - 자체크기, 자동으로 줄바꿈-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    
+    
+    <title>title </title>
+
+    <style>
+.tag{
+    display : inline-block;/* 컨텐츠 감싸준다.  */
+background-color: bisque;
+font-size: 24px;
+padding: 10px; /* 상하좌우가 다 16픽셀 */
+margin-top: 16px;
+margin-bottom: 30px;
+}
+div{
+    width:200px;
+    height:200px;
+    background-color: rgb(158, 82, 165);
+    border:1px dotted black;
+}
+    </style>
+</head>
+<body>
+    <div class="tag">윈도우 사이즈 </div>    <!-- 단축키 :   .tag    / 태그엔 블락요소-자체크기가 있음(가로세로 - 그래서 자동 줄바꿈 됨)와 인라인 요소가 있다.-->
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <script>
+        window.addEventListener('resize',()=>{  //arrow function   애로우 펑션 안쓸 경우,  ('resize',function(){
+            /* 모니터의 화면 크기임 - screen */
+            console.log(
+                `window.screen:${window.screen.width},${window.screen.height}`
+                );
+                /* url과 탭(세션아이디를 쿠키에 저장할) 전체적인 브라우저 크기임 */
+                console.log(
+                `window.outer:${window.outerWidth},${window.outerHeight}`
+                );
+                /* 이너는 웹페이지 + 스크롤바를 포함 */
+                console.log(
+                `window.inner:${window.inenerWidth},${window.innerHeight}`
+                );
+
+            /* 스크롤바가 제외된 문서만의 사이즈임  */
+                console.log(
+                `document(문서만):${document.documentElement.clientWidth},${document.documentElement.clientHeight}`
+                );
+
+
+        });//자바 람다식 지원
+        </script>
+
+<!--  비교<img/src="#"/>-->  
+</body>
+</html>

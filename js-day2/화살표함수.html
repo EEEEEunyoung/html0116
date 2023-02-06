@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type = "text/javascript">
+
+function hap(a1, a2){   //a1 = 1, a2=2 -> call by value
+    //1번 함수 
+ console.log(a1);
+}
+
+//3번 함수 - 일급함수라 함
+const hap1 = function(a1, a2){
+    const result= a1+a2
+    console.log(result)
+    return result
+
+}
+
+hap()  //undefined
+hap(1,2)  // 1
+hap(3)  //3
+
+//화살표함수
+const hap2 = (a1, a2)=> {
+    const result= a1+a2
+    console.log(result)
+    return result
+
+}
+
+const hap3 = a1=> {
+    const result= a1
+    console.log(result)
+    return result
+
+}
+
+
+hap1(10, 10)
+hap2(20,20)
+hap3(10)
+
+
+
+
+
+
+
+
+
+    </script>
+    
+
+</body>
+</html>
+
+
+<!-- 
+    -arrow Function? 
+:기존의 익명 함수를 좀 더 쓰기 쉽게 축약한 형태임
+: 내부로 전달되는 파라미터가 하나면 괄호는 생략 가능함
+
+자바 스크립트는 같은 이름의 함수를 중복 정의 못함
+왜냐면 메소드 오버로딩 없으니까 
+결론 : 함수 이름은 무조건 다르게 작명해야함 
+-->

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    </head>
+    <body>
+    <Script type="text/javascript">
+/* 객체 : Object
+데이터를 property라는 인덱싱을 통해 구조적으로 묶어 놓은 것  */
+
+let student={
+    name: "이성계",
+    age : 35,
+    adress: "서울시 마포구 공덕동",
+
+};
+document.write(student);
+document.write("<br>");
+
+document.write(student.name);
+document.write("<br>");
+
+document.write(student['name']);      //프포펄팅? 대괄호로 묶어서 줘도 된다고 함...
+document.write("age :" + student['age']);      //프포펄팅? 대괄호로 묶어서 줘도 된다고 함...
+
+document.write("<br>");
+
+let key = 'name'
+document.write(student[key]);
+document.write("<br>");
+
+student.name='강감찬';  // 이름 변경 
+document.write(student['name']);      //프포펄팅? 대괄호로 묶어서 줘도 된다고 함...
+
+
+
+
+console.log(student);
+console.log(student.name);
+console.log(student['name']);
+console.log(student[key]);
+
+
+
+
+    </Script>
+</body>
+</html>
