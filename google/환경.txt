@@ -1,0 +1,31 @@
+1. API키
+AIzaSyChI-udx6cofWn8USfsS2Wfl_N-Xw8Ayx4
+
+2. 구글 클라이언트 id - 구글에서 제공하는 인증 - 로그인
+172373074803-7ethcgtn7l03vbdlct5jhlbjsrnr10ph.apps.googleusercontent.com
+OAuth ID발급은 
+firebase console 에서 -> Authentication -> Sign in method 로 이동 -> 새 업체 정보 추가
+-> 사용설정 버튼 활성화(오른쪽 이동) -> 저장버튼클릭 -> 그러면 자동 발급 -> 클라이언트 ID 그걸로 반드시 사용할 것 
+-> API 및 서비스 이동 -> 승인된 자바 스크립트 원본 (localhost:5500과localhost등록 : 인텔리제이 배제 할거임)
+-> 403번 에러 발생, Domain ~~  ... 는 클라이언트 ID 문제임 
+
+2-1. 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
+
+
+3. 애플리케이션 홈페이지
+http://localhost:5500/google/index.html
+
+4. 승인된 자바스크립트 원본 - 사용중인 웹서버의 포트번호 반드시 확인 
+http://localhost:5500
+http://localhost
+
+5. 승인된 리디렉션 URI
+http://localhost:5500/google/googleLogin.html
+http://localhost:5500/google/modalLogin.html
+http://localhost:5500/google/firebaseJSTest.html
+
+
+
+
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+

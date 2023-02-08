@@ -1,7 +1,6 @@
 {
   "name": "html0116",
   "version": "1.0.0",
-  "description": "",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -13,10 +12,20 @@
   "dependencies": {
     "colors": "^1.4.0",
     "express": "^4.18.2",
+    "firebase": "^9.17.1",
     "font-awesome": "^4.7.0",
     "request": "^2.88.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EEEEEunyoung/html.git"
+  },
+  "bugs": {
+    "url": "https://github.com/EEEEEunyoung/html/issues"
+  },
+  "homepage": "https://github.com/EEEEEunyoung/html#readme",
+  "description": ""
 }
