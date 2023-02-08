@@ -1,0 +1,20 @@
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            const queryString = new URLSearchParams(window.location.search);
+            const id = queryString.get("id")
+            console.log(id);
+            let img=null;
+            const pics=["picture1.jpg","picture2.jpg","picture3.jpg","picture4.jpg"];
+            for(let i=0;pics.length;i++){
+                console.log(id+","+i);
+                if(id==i){
+                    img = pics[i]
+                    ;
+                    console.log(img);
+                    $("#imgDetail").attr("src", "../../images/sample/"+img);
+                } //end of if
+            }
+        })
+        </script>
+    <img id="imgDetail" src ="../../images/tent1.jpg" width="400px" heigt="400px" alt="그림"/>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="./picture.css"/>
+    <script> 
+        const startMethod = (td) => {
+            const pic=$(td).attr("id");
+            console.log(pic);
+            $.ajax({
+                method : "get", 
+                url : "pictureDetail.html?"+$("id")+pic+"&timestamp"+new Date().getTime(),
+                dataType: "html",
+                success: function(result){
+                    $("#d_pic").css("left",$(td).offset().left+50+"px");
+                    $("#d_pic").css("top", $(td).offset().top+"px");
+                    $("#d_pic").html(result);
+            }
+        })
+    };
+
+        const clearMethod=()=>{
+            // console.log("clearMethod");
+            $("#d_pic").html("");
+
+        }
+
+    </script>
+</head>
+<body>
+    <div id="d_pic"> </div>
+    
+        <table border ="1">
+            <thead>
+                <thead colspan="2">그림 목록</th>
+            </thead>
+        <tbody>
+            <tr>
+                <td align="center">
+                <img src="../../images/tent1.jpg" width="50" height="50"/></td>
+                <td id="picture1" onmouseover="startMethod(this)" onmouseout="clearMethod()">추상화1</td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <img src="../../images/beach-daylight.jpg" width="50" height="50"/></td>
+                    <td id="picture2" onmouseover="startMethod(this)" onmouseout="clearMethod()">추상화2</td>
+                </tr>
+                <tr>
+                    <td align="center">
+                    <img src="../../images/camping-goods.jpg" width="50" height="50"/></td>
+                <td id="picture3" onmouseover="startMethod(this)" onmouseout="clearMethod()">추상화3</td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <img src="../../images/camping-night2.jpg" width="50" height="50"/></td>
+                    <td id="picture4" onmouseover="startMethod(this)" onmouseout="clearMethod()">추상화4</td>
+                </tr>
+            </tbody>
+        </table>
+   
+</body>
+</html>
