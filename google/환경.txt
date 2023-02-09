@@ -1,5 +1,5 @@
 1. API키
-AIzaSyChI-udx6cofWn8USfsS2Wfl_N-Xw8Ayx4
+AIzaSyCAQ5IRU2eOCxFb4fcpeioQVdf56_9u3WY
 
 2. 구글 클라이언트 id - 구글에서 제공하는 인증 - 로그인
 172373074803-7ethcgtn7l03vbdlct5jhlbjsrnr10ph.apps.googleusercontent.com
