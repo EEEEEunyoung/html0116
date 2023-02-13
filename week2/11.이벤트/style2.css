@@ -1,0 +1,19 @@
+a{
+    display: block;
+    width: 100px;
+    height: 50px;
+    background-color: aquamarine;
+    text-align: center;
+    margin: 20px 0px 0px 100px;
+    font : bold 16px/50px "airal";
+}
+
+
+
+.box {
+width: 500px;
+height: 500px;
+background-color: bisque;
+}
+
+

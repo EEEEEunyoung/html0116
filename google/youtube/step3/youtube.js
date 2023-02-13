@@ -1,9 +1,12 @@
 const keyword = document.querySelector("#keyword");
 //input textfield에 입력한 후 엔터 쳤을 때를 잡아내는 함수
 keyword.addEventListener("keypress", (event) => {
+  if (event.keyCode === 13) {
+    event.preventDefault();
   console.log("onkeypress가 엔터인지? 아닌지" + event.keyCode);
   //사용자가 입력한 검색어를 찾는 함수 호출
   handleSearch();
+  }
 });
 //사용자가 입력한 검색어 읽어오기
 const handleSearch = () => {

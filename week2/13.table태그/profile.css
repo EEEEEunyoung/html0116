@@ -1,0 +1,73 @@
+*{
+    border: 1px solid red;
+    width: 300px;
+}
+
+/* p{
+    padding: 20px;
+} */
+
+.img{
+    margin: 10px 0px 0px 40px;  /* 위. 오, 밑, 왼 */
+    width: 200px;
+    height: 150px;
+    border-radius: 50%;
+    
+}
+
+
+.a{
+    padding: 10px;
+    margin : 0px;
+    width :270px;
+    text-align: center;
+}
+
+.b{
+    text-align: center;
+    width : 290px;
+}
+
+.left{
+    width: 40px;
+    position: absolute;
+
+}
+
+.right{
+    width: 40px;
+    position: absolute;
+
+    
+}
+
+
+div{
+    width: 290px;
+}
+
+p.img{
+    width: 180px;
+}
+
+.view{
+background-color: skyblue;
+border-radius: 150PX;
+width: 290PX;
+
+}
+
+.F{
+    WIDTH : 40PX;
+    font-size: 5px;
+}
+
+.btn{
+    width: 40px;
+height: 40px;
+border-radius: 50%;
+margin: 10px 10px 0px 15px;  /* 위. 오, 밑, 왼 */
+
+
+}
+

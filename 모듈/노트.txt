@@ -1,0 +1,4 @@
+pakaga.json 에  "type":"module", 등록한다. 
+
+생략하면  CommonJS 이므로 반드시 module을 등록한 후 사용 가능하다.- 주의
+ 

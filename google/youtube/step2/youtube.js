@@ -1,4 +1,7 @@
 const ajax = new XMLHttpRequest()
+//문자열 처리하는 경우가 훨씬 더 직관적이다. - 정적이다. - 고정이다.  - 결정된 상태 
+//배열은 덜 하다 - 뚝뚝 끊어지니까... - 동적처리 가능함
+//그런데 왜 ?
 let content2 ="";
 let videoList =[];
 const key = "AIzaSyCAQ5IRU2eOCxFb4fcpeioQVdf56_9u3WY";
