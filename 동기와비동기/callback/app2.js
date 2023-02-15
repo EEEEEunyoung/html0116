@@ -3,7 +3,7 @@
 const goodSearch = (callback) => {
   setTimeout(() => {
     console.log("상품조회");
-  }, 2000);
+  }, 0);
 };
 
 const cart = () => console.log("카트담기");
