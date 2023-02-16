@@ -91,8 +91,6 @@
                         <button id="reset" onclick="clearthings()">초기화</button>
                         <button id="signup"onclick="join()">회원가입</button>
                     </div>
-
-
 </fieldset>
 
 
@@ -101,7 +99,7 @@
     const a = document.querySelector("#id_recheck")
     a.addEventListener('click', idcheckkk=>{
       let idddd= document.getElementById("mem_id1");
-      const reg =  /^[a-z][a-z0-9!@#]{6,12}$/;
+      const reg =  /^[a-z][0-9!@#]{5,11}$/;
       
   console.log(reg.test(idddd.value));
       if(!reg.test(idddd.value)){ 
@@ -146,9 +144,9 @@ clearthings=()=>{
     c.addEventListener('click', resetset());
     
     function resetset() {
-      document.getElementById("mem_id1").value="";
-      document.getElementById("mem_id2").value="";
-      document.getElementById("mem_id3").value="";
+      document.getElementById("mem_id1").value=null;
+      document.getElementById("mem_id2").value=null;
+      document.getElementById("mem_id3").value=null;
     
 
       let chk_radio = document.getElementsByName('location');
@@ -158,7 +156,6 @@ clearthings=()=>{
         chk_radio[i].checked=null;
 			}
 		}
-
   }
 }//end of clear
 

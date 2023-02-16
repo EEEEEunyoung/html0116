@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style type="text/css">
+
+
+   label {
+   font-size : 20px;
+   }
+
+
+    #mem_id1{
+        margin-left: 100px;
+    }
+    #mem_id2{
+        margin-left: 80px; 
+    }
+    #mem_id3{
+        margin-left: 33px; 
+    }
+
+
+    #fooorm{
+        width: 400px;
+        /* border: 1px solid black; */
+    }
+
+    #bottomBtn{
+        display: inline-block;
+    }
+
+
+    #reset{
+        margin: 30px;
+    }
+    #signup{
+        margin-left:0px
+    }
+
+
+    #id_div {
+        display: inline-block;
+    }
+
+
+    #id_div #id_recheck{
+        display: inline-block;
+    }
+
+    #id_recheck{
+        display: inline-block;
+    }
+
+
+
+
+
+</style>
+</head>
+<body>
+        <fieldset>
+
+            <legend>회원 가입 양식</legend>
+            <div id="fooorm"> 
+                <div id="id_div">
+                    <label class="title">아이디</label>
+                    <input type="text" id="mem_id1" name="title" style="background-color:white;">
+                    <button id="id_recheck" >중복확인</button>
+                </div>
+                
+                <label class="content">비밀번호</label>
+                <input type="text" id="mem_id2" name="content" placeholder="내용을 입력하세요">
+                <br/>
+
+                <label class="content">비밀번호 확인</label>
+                <input type="text" id="mem_id3" name="content" placeholder="내용을 입력하세요" >
+                <br/>
+                
+                <label class="loc">지역</label>
+                서울 <input type="radio" name="location" value="서울">
+                부산 <input type="radio" name="location" value="부산">
+                대구 <input type="radio" name="location" value="대구">
+            </div>
+                
+                    <div id="bottomBtn">
+                        <button id="reset" onclick="clearthings()">초기화</button>
+                        <button id="signup"onclick="join()">회원가입</button>
+                    </div>
+</fieldset>
+
+
+
+<script defer type="text/Javascript"> 
+    const a = document.querySelector("#id_recheck")
+    a.addEventListener('click', idcheckkk=>{
+      let idddd= document.getElementById("mem_id1");
+      const reg =  /^[a-z][0-9!@#]{5,11}$/;
+      
+  console.log(reg.test(idddd.value));
+      if(!reg.test(idddd.value)){ 
+      document.getElementById("mem_id1").style.backgroundColor='red';
+  }      
+      else {
+          window.alert(idddd.value + "은(는) 사용할 수 있는 ID입니다");
+          document.getElementById("mem_id1").style.backgroundColor = 'green';    
+      }
+
+    });
+
+
+
+join=()=>{
+  const b = document.querySelector("#signup")
+    b.addEventListener('click', signuppp())
+
+    function signuppp() {
+      let chk_radio = document.getElementsByName('location');
+		  let sel_type = null;
+		for(var i=0;i<chk_radio.length;i++){
+			if(chk_radio[i].checked == true){ 
+				sel_type = chk_radio[i];
+        console.log(sel_type.value);
+			}
+		}
+
+		if(sel_type == null){
+                alert("지역을 선택해주세요. "); 
+			return false;
+		}
+    }
+}   //end of join
+
+
+
+
+
+clearthings=()=>{
+  const c = document.querySelector("#reset")
+    c.addEventListener('click', resetset());
+    
+    function resetset() {
+      document.getElementById("mem_id1").value="";
+      document.getElementById("mem_id2").value="";
+      document.getElementById("mem_id3").value="";
+    
+
+      let chk_radio = document.getElementsByName('location');
+		  let sel_type = null;
+		for(var i=0;i<chk_radio.length;i++){
+			if(chk_radio[i].checked == true){ 
+        chk_radio[i].checked=null;
+			}
+		}
+  }
+}//end of clear
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

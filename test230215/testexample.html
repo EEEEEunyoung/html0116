@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      const init = () => {
+        console.log("init호출");
+        console.log(document.querySelector("#f_test"));
+        //insert here - DOM Tree 구성 완료되면...
+        //document.querySelector(#)
+        //document.querySelector(.)
+        //document.querySelector(이름)
+        //document.querySelectorAll(이름)-> 배열로 자동 전환됨 브라우저가함
+      };
+    </script>
+  </head>
+  <body onload="init()">
+    <form id="f_test" method="get" action="UserServlet">
+      <fieldset style="width: 400px">
+        <legend>필수 입력 항목</legend>
+        <table>
+          <tr>
+            <td><label for="ID">ID</label></td>
+            <td>
+              <input id="ID" type="text" />
+              <input type="button" value="중복확인" id="check" />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="pwd">비밀번호</label></td>
+            <td><input id="pwd" type="password" /></td>
+          </tr>
+          <tr>
+            <td><label for="pwd2">비밀번호 확인</label></td>
+            <td><input id="pwd2" type="password" /></td>
+          </tr>
+          <tr>
+            <td><label>지역</label></td>
+            <td>
+              <input id="seoul" type="radio" name="loc" />
+              <label for="seoul">서울</label>
+              <input id="busan" type="radio" name="loc" />
+              <label for="busan">부산</label>
+              <input id="daegu" type="radio" name="loc" />
+              <label for="daegu">대구</label>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+<!-- 아이디 중복확인은 버튼이 눌릴 때 마다 이벤트가 적용 되므로 
+addEventListener 사용. onclick 사용 x - 마지막 한번만 처리됨 - 주의  -->
+              <input type="button" value="초기화" />
+              <input type="button" value="회원가입" id="hi"/>
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+    </form>
+    <script> 
+
+      const a = document.querySelector("#check");
+      a.addEventListener('click', ()=>{
+        const reg =  /^[a-z][0-9!@#]{5,11}$/;
+        let idddd= document.querySelector("#ID");
+        let str=idddd.value;
+        let isFlag=false;
+        if(str.length !=null && str.length >0){
+          isFlag=reg.test(str);
+
+        } 
+       const color = isFlag ? 'green':'red';
+          console.log(color);
+          console.log(isFlag);
+        idddd.style.backgroundColor=color;
+      })  //end of 중복확인
+
+
+
+
+      const locs=document.querySelectorAll(".loc");
+      console.log(locs);
+      let user= "";
+      console.log("before==>"+ user);
+      for(let i=0; i<locs.length; i++){
+        locs[i].addEventListener("click", ()=>{
+          user=locs[i].value;
+          console.log("after==>"+user);
+        })
+      }
+
+
+
+
+
+    </script>  
+  </body>
+</html>
