@@ -38,15 +38,16 @@
 .banner_menu .bm_left{float: left;}
 .banner_menu .bm_left ul{}
 .banner_menu .bm_left li{display: inline; margin-right:30px; position:relative; margin-right:30px;}
-.banner_menu .bm_left li .total{margin-right:20px;}
-.banner_menu .bm_left li .total a{font-size: 14px; padding: 3px 10px; display: inline-block; padding: 3px 10px; display: inline-block; border: 1px solid #fff; transition: all 0.3s; margin: 20px;}
-.banner_menu .bm_left li .total a:hover{background: #fff; border-color:#000; color:#000; font-size: 14px;  }
+.banner_menu .bm_left li.total{margin-right:20px;}
+.banner_menu .bm_left li.total a{font-size: 14px; padding: 3px 10px; display: inline-block; padding: 3px 10px; display: inline-block; border: 1px solid #fff; transition: all 0.3s; margin: 20px;}
+.banner_menu .bm_left li.total a:hover{background: #fff; border-color:#000; color:#000; font-size: 14px;  }
 .banner_menu .bm_right{float: right;}
 .banner_menu .bm_right ul{float: left}
 .banner_menu .bm_right li{position: relative; display: inline; text-align: center; margin-right:20px}
-.banner_menu .bm_right li .line{margin-right : 30px}
-.banner_menu .bm_right li .white{margin-right : 10px}
-.banner_menu .bm_right li .white a{width: 80px; background-color: #fff; color: #3a0e6a; padding:7px 30px 9px 30px; display:inline-block; border:1px solid #fff}
+.banner_menu .bm_right li.line{margin-right : 30px}
+.banner_menu .bm_right li.white{margin-right : 10px}
+.banner_menu .bm_right li.white a{width: 80px; background-color: #fff; color: #3a0e6a; padding:7px 30px 9px 30px; display:inline-block; border:1px solid #fff}
+.banner_menu .bm_right li.purple a{width: 80px; background-color: #3a0e6a; color: #fff; padding:7px 30px 9px 30px; display:inline-block; border:1px solid #fff}
 
 
 .banner_menu li .line:after{content: ''; width:1px; height: 14px; background: #fff; position:absolute; right:-18px; top: 2px;}
